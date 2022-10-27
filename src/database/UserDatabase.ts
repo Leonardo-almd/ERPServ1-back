@@ -2,7 +2,7 @@ import { IUserDB, User } from "../models/User"
 import { BaseDatabase } from "./BaseDatabase"
 
 export class UserDatabase extends BaseDatabase {
-    public static TABLE_USERS = "nome da tabela no banco" //////////////////////////
+    public static TABLE_USERS = "users_erp" //////////////////////////
 
     public findByEmail = async (email: string) => {
         const usersDB: IUserDB[] = await BaseDatabase
