@@ -83,6 +83,10 @@ export class PrjBusiness {
     public getPrjByCod = async (input: any) => {
         const prj = await this.prjDatabase.findByCod(input.cod)
 
+        if (!prj) {
+            throw new Error("PRJ não encontrado")
+        }
+
         return prj
     }
 }
