@@ -65,4 +65,17 @@ export class PrjController {
         }
     }
 
+    public getPrjByCod = async (req: Request, res: Response) => {
+        try {
+            const input = {
+                cod: req.headers.cod
+            }
+            const response = await this.prjBusiness.getPrjByCod(input)
+
+            res.status(200).send(response)            
+        } catch (error: any) {
+            res.status(400).send({ message: error.message })            
+        }
+    }
+
 }

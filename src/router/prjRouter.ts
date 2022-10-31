@@ -16,3 +16,4 @@ const prjController = new PrjController(
 prjRouter.post("/create", prjController.postPrj)
 prjRouter.put("/edit", prjController.editPrj)
 prjRouter.get("/get", prjController.getPrj)
+prjRouter.get("/search", prjController.getPrjByCod)

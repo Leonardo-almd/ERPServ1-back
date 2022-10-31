@@ -79,4 +79,10 @@ export class PrjBusiness {
 
         return prjs
     }
+
+    public getPrjByCod = async (input: any) => {
+        const prj = await this.prjDatabase.findByCod(input.cod)
+
+        return prj
+    }
 }
