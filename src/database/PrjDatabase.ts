@@ -9,7 +9,7 @@ export class PrjDatabase extends BaseDatabase {
             .connection(PrjDatabase.TABLE_PRJ)
             .select()
 
-        return prjsDB[0]
+        return prjsDB
     }
 
     public findByCod = async (cod: string) => {
