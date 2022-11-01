@@ -12,8 +12,7 @@ export class PrjBusiness {
     ) { }
 
 
-    public postPrj = async (input: IPostInputDTO) => {
-        const folder_last_project_id = input.folder_last_project_id
+    public postPrj = async (input: IPostInputDTO) => {        
         const date_at = input.date_at
         const members_user_name = input.members_user_name
         const start_time = input.start_time
@@ -23,10 +22,19 @@ export class PrjBusiness {
         const organizacao = input.organizacao
         const cod_proj = input.cod_proj
         const desc_proj = input.desc_proj 
-        const cod = this.idGenerator.generate()       
+        const cod = this.idGenerator.generate() 
+        
+        const folder_last_project_id = () => {
+            if(organizacao == "AUSTER") {
+                return 3883016
+            }
+            if(organizacao == "PROMAX") {
+                return 3885061
+            } 
+        }
 
         const prj = new Prj(
-            folder_last_project_id,
+            ,
             date_at,
             members_user_name,
             start_time,
