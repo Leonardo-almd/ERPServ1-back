@@ -24,7 +24,7 @@ export class PrjBusiness {
         const desc_proj = input.desc_proj 
         const cod = this.idGenerator.generate() 
         
-        const folder_last_project_id = () => {
+        const folder_id = (): any => {
             if(organizacao == "AUSTER") {
                 return 3883016
             }
@@ -33,8 +33,10 @@ export class PrjBusiness {
             } 
         }
 
+        const folder_last_project_id = folder_id()
+
         const prj = new Prj(
-            ,
+            folder_last_project_id,
             date_at,
             members_user_name,
             start_time,
@@ -62,8 +64,21 @@ export class PrjBusiness {
             throw new Error("PRJ não cadastrado")
         }
 
+        const folder_id = (): any => {
+            if(input.organizacao == "AUSTER") {
+                return 3883016
+            }
+            if(input.organizacao == "PROMAX") {
+                return 3885061
+            } 
+        }
+
+        const folder_last_project_id = folder_id()
+
+
+
         const prj = new Prj(
-            input.folder_last_project_id,
+            folder_last_project_id,
             input.date_at,
             input.members_user_name,
             input.start_time,
