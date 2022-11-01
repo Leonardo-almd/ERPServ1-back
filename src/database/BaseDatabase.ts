@@ -5,7 +5,7 @@ dotenv.config()
 
 export abstract class BaseDatabase {
     protected static connection = knex({
-        client: "mysql",
+        client: 'mssql',
         connection: {
             host: process.env.DB_HOST,
             port: 3306,
