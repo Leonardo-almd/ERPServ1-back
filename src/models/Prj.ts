@@ -104,7 +104,6 @@ export class Prj {
 
 
 export interface IPostInputDTO {
-    folder_last_project_id: number,
     date_at: string,
     members_user_name: string,
     start_time: string,
