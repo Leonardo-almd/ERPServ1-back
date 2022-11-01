@@ -10,8 +10,7 @@ export class PrjController {
 
     public postPrj = async (req: Request, res: Response) => {
         try {
-            const input: IPostInputDTO = {
-                folder_last_project_id: req.body.folder_last_project_id,
+            const input: IPostInputDTO = {                
                 date_at: req.body.date_at,
                 members_user_name: req.body.members_user_name,
                 start_time: req.body.start_time,
@@ -34,8 +33,7 @@ export class PrjController {
     public editPrj = async (req: Request, res: Response) => {
         try {
             const input: any = {
-                cod: req.headers.cod,
-                folder_last_project_id: req.body.folder_last_project_id,
+                cod: req.headers.cod,                
                 date_at: req.body.date_at,
                 members_user_name: req.body.members_user_name,
                 start_time: req.body.start_time,

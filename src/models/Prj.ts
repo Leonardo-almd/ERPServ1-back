@@ -1,6 +1,6 @@
 export enum AccountName {
     Projetos = "PROJETOS_M",
-
+    Arquitetura = "ARQUITETURA_M"
 }
 
 export interface IPrjDB {
