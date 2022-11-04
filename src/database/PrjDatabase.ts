@@ -2,7 +2,7 @@ import { IPrjDB, Prj } from "../models/Prj"
 import { BaseDatabase } from "./BaseDatabase"
 
 export class PrjDatabase extends BaseDatabase {
-    public static TABLE_PRJ = "prj_erp" //////////////////////////
+    public static TABLE_PRJ = "ZZB990" //////////////////////////
 
     public getPrj = async () => {
         const prjsDB: IPrjDB[] = await BaseDatabase

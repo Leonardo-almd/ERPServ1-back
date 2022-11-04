@@ -5,14 +5,14 @@ dotenv.config()
 
 export abstract class BaseDatabase {
     protected static connection = knex({
-        client: 'mssql',
+        client: 'mysql',
         connection: {
-            host: process.env.DB_HOST,
-            port: 3306,
-            user: process.env.DB_USER,
-            password: process.env.DB_PASSWORD,
-            database: process.env.DB_DATABASE,
-            multipleStatements: true
-        },
+            host: "localhost",
+            port: 3006,
+            user: "root",
+            password: "password",
+            database: "PROTHEUS_2EASY",
+            multipleStatements: true                             
+        }
     })
 }
